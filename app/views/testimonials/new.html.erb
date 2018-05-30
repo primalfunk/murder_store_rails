@@ -1,0 +1,9 @@
+<h1>Add a Testimonial!</h1>
+<%= form_for [@item, @testimonial] do |f| %>
+<%= f.label :desc %>
+<%= f.text_area :desc, required: true, autofocus: true %>
+<br />
+<%= f.label :author %>
+<%= f.text_field :author, placeholder: "Guest" %>
+<%= f.submit %>
+<% end %>

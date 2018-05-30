@@ -1,0 +1,11 @@
+<h1>Department: <i><%= @department.name %></i>, Option: <i><%= @item.name %></i></h1>
+<hr />
+<p>With this option, you will be murdered in <strong><%= @department.name %></strong> by <strong><%= @item.name %></strong> for only <strong>$<%= @item.price %>!</strong></p>
+<h2>Testimonials</h2>
+<% @item.testimonials.each do |testimonial| %>
+<%= render 'testimonials/testimonial', { testimonial: testimonial } %>
+<% end %>
+<%= link_to 'Add Testimonial', new_item_testimonial_path(@item) %>
+<%= link_to 'Edit Option', edit_department_item_path([@department, @item]) %>
+<%= link_to 'Delete Option', [@department, @item], method: :delete %>
+<%= link_to 'Back to Options', department_items_path(@department) %>

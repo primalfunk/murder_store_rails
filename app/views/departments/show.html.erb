@@ -1,0 +1,10 @@
+<h1>Details of department: <strong><%= @department.name %></strong></h1>
+<hr />
+<p>Name: <%= @department.name %>
+<br />
+<%= link_to 'Show Murder Options', department_items_path(@department) %>
+<br />
+<%= link_to 'Edit Department', edit_department_path(@department) %>
+<br />
+<%= link_to 'Delete Department', @department, method: :delete %></p>
+<hr />

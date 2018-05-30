@@ -1,0 +1,9 @@
+<h1>Welcome to the Murder Store departments list</h1>
+<%= link_to 'Create a new Department', new_department_path %>
+<hr />
+<div class="d_wrapper">
+  <% @departments.each do |department| %>
+  <%= link_to department.name, department %>
+<% end %>
+</div>
+<hr />

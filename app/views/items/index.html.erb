@@ -1,0 +1,9 @@
+<h1><%= @department.name %> Options</h1>
+<hr />
+<%= link_to 'Create a new Murder Option', new_department_item_path(@department) %>
+<div class="d_wrapper">
+<% @items.each do |item| %>
+  <%= link_to item.name, [@department, item] %>
+<% end %>
+</div>
+
